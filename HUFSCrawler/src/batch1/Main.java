@@ -9,11 +9,15 @@ public class Main {
 		ArrayList <String> fetchedURL = new ArrayList<>();
 		
 		String result = Query.getSearchResult("πÆ¿Á¿Œ");
+		System.out.println(result);
 		fetchedURL = getPageURL.getURL(result);
 		/*for (int i = 0; i < fetchedURL.size(); i++){
 			System.out.println(fetchedURL.get(i));
 		}*/
+		System.out.println();
+		TimeNow.setTimeStamp();
 		Parse.parseArticle(fetchedURL);
+		
 	}
 	
 }

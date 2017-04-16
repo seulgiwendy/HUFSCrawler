@@ -12,11 +12,11 @@ public class Query extends Preferences{
 		try{
 			
 			String query = URLEncoder.encode(Query, "UTF-8");
-			URL targetURL = new URL(apiURL + query + "&display=100");
+			URL targetURL = new URL(Preferences.apiURL + query + "&display=100");
 			HttpURLConnection connect = (HttpURLConnection)targetURL.openConnection();
 			connect.setRequestMethod("GET");
-            connect.setRequestProperty("X-Naver-Client-Id", clientID);
-            connect.setRequestProperty("X-Naver-Client-Secret", clientSecret);
+            connect.setRequestProperty("X-Naver-Client-Id", Preferences.clientID);
+            connect.setRequestProperty("X-Naver-Client-Secret", Preferences.clientSecret);
 			int responseCode = connect.getResponseCode();
 			BufferedReader br;
             if(responseCode==200) { // 정상 호출

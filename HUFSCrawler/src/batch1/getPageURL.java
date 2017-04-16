@@ -23,6 +23,7 @@ public class getPageURL{
     	
     	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
     	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+    	
     	InputStream is = new ByteArrayInputStream(result.getBytes());
 
     	Document doc = dBuilder.parse(is);
